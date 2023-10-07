@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Seo title="Dragon" description="Description..."/>
-      <h1>Hello Word</h1>
+      <h1>Dragon WebApp</h1>
     </>
   );
 }
