@@ -40,26 +40,89 @@ interface Props {
 
     className?: string;
 
-
     children: React.ReactNode;
 }
 
-export const Typography = ({ variant = "h3", children, component: Component = "div", theme = "black", weight = "regular", className }: Props) => {
+export const Typography = ({
+    variant = "h3",
+    component: Component = "div",
+    theme = "black", weight = "regular",
+    className,
+    children,
+}: Props) => {
 
-    let variantStyles: string = "";
+    let variantStyles: string = "", colorStyles: string = "";
 
     switch (variant) {
         case "display":
-            variantStyles = "text-red-500"
+            variantStyles = "text-8xl"
             break;
         case "h1":
-            variantStyles = "text-green-500"
+            variantStyles = "text-7xl"
+            break;
+        case "h2":
+            variantStyles = "text-6xl"
+            break;
+        case "h3": //Default
+            variantStyles = "text-5xl"
+            break;
+        case "h4":
+            variantStyles = "text-4xl"
+            break;
+        case "h5":
+            variantStyles = "text-3xl"
+            break;
+        case "lead":
+            variantStyles = "text-2xl"
+            break;
+        case "body-lg":
+            variantStyles = "text-lg"
+            break;
+        case "body-base":
+            variantStyles = "text-base"
+            break;
+        case "caption1":
+            variantStyles = "text-caption1"
+            break;
+        case "caption2":
+            variantStyles = "text-caption2"
+            break;
+        case "caption3":
+            variantStyles = "text-caption3"
+            break;
+        case "caption4":
+            variantStyles = "text-caption4"
             break;
     }
 
+    switch (theme) {
+        case "black":
+            colorStyles = "";
+            break;
+        case "gray":
+            colorStyles = "";
+            break;
+        case "white":
+            colorStyles = "";
+            break;
+        case "primary":
+            colorStyles = "";
+            break;
+        case "secondary":
+            colorStyles = "";
+            break;
+        default:
+            break;
+    }
 
     return (
-        <Component className={clsx(variantStyles, className)}>
+        <Component className={clsx(
+            variantStyles,
+            className,
+            weight === "medium" && "font-medium",
+            "text-8xl",
+            colorStyles,
+        )}>
             {children}
         </Component>
     )
