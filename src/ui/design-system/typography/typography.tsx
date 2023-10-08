@@ -46,12 +46,14 @@ interface Props {
 export const Typography = ({
     variant = "h3",
     component: Component = "div",
-    theme = "black", weight = "regular",
+    theme = "black",
+    weight = "regular",
     className,
     children,
 }: Props) => {
 
-    let variantStyles: string = "", colorStyles: string = "";
+    let variantStyles: string = "",
+        colorStyles: string = "";
 
     switch (variant) {
         case "display":
@@ -97,19 +99,19 @@ export const Typography = ({
 
     switch (theme) {
         case "black":
-            colorStyles = "";
+            colorStyles = "text-gray";
             break;
         case "gray":
-            colorStyles = "";
+            colorStyles = "text-gray-700";
             break;
         case "white":
-            colorStyles = "";
+            colorStyles = "text-white";
             break;
         case "primary":
-            colorStyles = "";
+            colorStyles = "text-primary";
             break;
         case "secondary":
-            colorStyles = "";
+            colorStyles = "text-secondary";
             break;
         default:
             break;
@@ -120,7 +122,6 @@ export const Typography = ({
             variantStyles,
             className,
             weight === "medium" && "font-medium",
-            "text-8xl",
             colorStyles,
         )}>
             {children}
