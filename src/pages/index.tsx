@@ -53,9 +53,9 @@ export default function Home() {
           Avatar
         </Typography>
         <div className="flex items-center gap-2 p-5 borde border-gray-400 rounded">
-          <Avatar size="small"/>
-          <Avatar />
-          <Avatar size="large"/>
+          <Avatar size="small" src="/assets/images/image.png" alt="Avatar Daniel"/>
+          <Avatar src="/assets/images/image.png" alt="Avatar Daniel"/>
+          <Avatar size="large" src="/assets/images/image.png"alt="Avatar Daniel"/>
         </div>
 
         {/* Logo */}
