@@ -1,9 +1,11 @@
 import { Seo } from "@/ui/components/seo"
 import { Button } from "@/ui/design-system/button/button";
+import { Logo } from "@/ui/design-system/logo/logo";
 import { Spinner } from "@/ui/design-system/spinner/spinner";
 import { Typography } from "@/ui/design-system/typography/typography";
 import { RiNotification2Fill, RiShieldUserLine } from "react-icons/ri";
 import { RiUser6Fill } from "react-icons/ri"
+import { Avatar } from "@/ui/design-system/avatar/avatar";
 
 export default function Home() {
   return (
@@ -40,10 +42,31 @@ export default function Home() {
         <Typography variant="caption2" weight="medium">
           Spinners
         </Typography>
-        <div className="flex items-center gap-4 p-10">
+        <div className="flex items-center gap-2 p-5 borde border-gray-400 rounded">
           <Spinner size="small" />
           <Spinner />
           <Spinner size="large" />
+        </div>
+
+        {/* Avatar */}
+        <Typography variant="caption2" weight="medium">
+          Avatar
+        </Typography>
+        <div className="flex items-center gap-2 p-5 borde border-gray-400 rounded">
+          <Avatar size="small"/>
+          <Avatar />
+          <Avatar size="large"/>
+        </div>
+
+        {/* Logo */}
+        <Typography variant="caption2" weight="medium">
+          Logo
+        </Typography>
+        <div className="flex items-center gap-2 p-5 borde border-gray-400 rounded">
+          <Logo size="very-small"/>
+          <Logo size="small"/>
+          <Logo />
+          <Logo size="large"/>
         </div>
 
         {/* Buttons */}
@@ -53,7 +76,7 @@ export default function Home() {
         <Typography variant="caption3" weight="medium">
             Small
           </Typography>
-        <div className="flex items-center gap-4 p-10">
+        <div className="flex items-center gap-2 p-5 borde border-gray-400 rounded">
           <Button isLoading size="small">
             Accent
           </Button>
@@ -78,7 +101,7 @@ export default function Home() {
         <Typography variant="caption3" weight="medium">
             Medium
           </Typography>
-        <div className="flex items-center gap-4 p-10">
+        <div className="flex items-center gap-2 p-5 borde border-gray-400 rounded">
           <Button>Accent</Button>
           <Button variant="secondary">
             Secondary
@@ -95,7 +118,7 @@ export default function Home() {
         <Typography variant="caption3" weight="medium">
             Large
           </Typography>
-        <div className="flex items-center gap-4 p-10">
+        <div className="flex items-center gap-2 p-5 borde border-gray-400 rounded">
           <Button size="large">
             Accent
           </Button>
